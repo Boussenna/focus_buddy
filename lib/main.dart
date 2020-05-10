@@ -60,7 +60,7 @@ class _HomePageDialogflow extends State<HomePageDialogflow> {
   void Response(query) async {
     _textController.clear();
     AuthGoogle authGoogle =
-    await AuthGoogle(fileJson: "assets/ /*insert your json file name here*/")
+    await AuthGoogle(fileJson: "assets/focus-smqtyh-8d8b9be83b0f.json")
         .build();
     Dialogflow dialogflow =
     Dialogflow(authGoogle: authGoogle, language: Language.english);
@@ -68,7 +68,7 @@ class _HomePageDialogflow extends State<HomePageDialogflow> {
     ChatMessage message = new ChatMessage(
       text: response.getMessage() ??
           new CardDialogflow(response.getListMessage()[0]).title,
-      name: "Bot",
+      name: "FocusBot",
       type: false,
     );
     setState(() {
@@ -80,7 +80,7 @@ class _HomePageDialogflow extends State<HomePageDialogflow> {
     _textController.clear();
     ChatMessage message = new ChatMessage(
       text: text,
-      name: "Promise",
+      name: "You",
       type: true,
     );
     setState(() {
